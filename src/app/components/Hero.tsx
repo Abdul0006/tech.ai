@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
           </h1>
 
           <div className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-xl mx-auto lg:mx-0 mb-8 font-light">
-            I'm a passionate&nbsp;
+            I am a passionate&nbsp;
             <TypeAnimation
               sequence={[
                 'AI Engineer',
