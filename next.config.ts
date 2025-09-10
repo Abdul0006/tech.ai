@@ -6,11 +6,12 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value:
       "default-src 'self'; " +
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; " +
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
-      "img-src 'self' data: https:; " +
-      "font-src 'self' https://fonts.gstatic.com data:; " +
-      "connect-src 'self' https:; " +
+      "script-src 'self'; " + // no inline/eval scripts
+      "object-src 'none'; " + // disallow Flash, plugins, etc.
+      "style-src 'self' https://fonts.googleapis.com; " +
+      "img-src 'self' https://*; " +
+      "font-src 'self' https://fonts.gstatic.com; " +
+      "connect-src 'self' https://*; " +
       "frame-ancestors 'none'; " +
       "base-uri 'self'; " +
       "form-action 'self';",
